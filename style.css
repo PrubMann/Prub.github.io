@@ -2,6 +2,8 @@ body {
   font-family: Open Sans, sans-serif;
   color: white;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 #bgvid {
   position: absolute;
@@ -56,7 +58,7 @@ span {
   background: rgba(0, 0, 0, 0.432);
   width: 700px;
   padding: 15px;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .item2 {
@@ -68,7 +70,7 @@ span {
   background: rgba(0, 0, 0, 0.432);
   width: 700px;
   padding: 15px;
-  border-radius: 25px;
+  border-radius: 15px;
 
   margin: auto;
 }
@@ -82,7 +84,7 @@ span {
   background: rgba(0, 0, 0, 0.432);
   width: 700px;
   padding: 15px;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 /* .... */
@@ -91,7 +93,7 @@ span {
   position: absolute;
   width: 700px;
   height: 200px;
-  border-radius: 25px 25px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   object-fit: cover;
   z-index: 0;
 }
@@ -108,12 +110,15 @@ span {
   font-weight: 700;
 }
 .addondisc {
+  display: flex;
+  padding: 0px;
+  gap: 10px;
   color: white;
   text-decoration: none;
   margin-left: 310px;
   align-self: center;
   font-weight: 700;
-  padding: 20px 40px 20px 40px;
+  padding: 15px 30px 10px 30px;
   background-color: rgba(255, 255, 255, 0.062);
   border-radius: 15px;
   white-space: nowrap;
@@ -125,7 +130,7 @@ span {
 .pfp {
   height: 200px;
   border-radius: 50%;
-  border: 10px solid rgba(0, 0, 0, 0.363);
+  border: 8px solid rgba(0, 0, 0, 0.363);
   justify-content: center;
 
   position: relative;
@@ -136,16 +141,21 @@ span {
 
 .LINK:hover .tooltip1 {
   display: block;
-  transform: translate(10px, 50px);
+  transform: translate(10px, 30px);
   transition: 0.5s;
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+  transition: 0.5s;
 }
-
+.logo:hover {
+  margin: -5px 15px -5px 15px;
+  border: 3px solid;
+  color: white;
+}
 .tooltip1 {
   display: none;
   font-size: 18px;
@@ -156,6 +166,73 @@ span {
   z-index: 1000;
   padding: 5px;
   border-radius: 7px;
+}
+
+/* .... */
+
+/* css icon */
+.gg-arrow-right {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  transform: translateY(-2px);
+  width: 22px;
+  height: 22px;
+  white-space: nowrap;
+  transition: 0.5s;
+}
+.gg-arrow-right::after,
+.gg-arrow-right::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  right: 3px;
+}
+.gg-arrow-right::after {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  bottom: 7px;
+  transition: 0.5s;
+}
+.gg-arrow-right::before {
+  width: 16px;
+  height: 2px;
+  bottom: 10px;
+  background: currentColor;
+  transition: 0.5s;
+}
+/* .... */
+
+/* Click Anywhere */
+.btn {
+  color: white;
+  font-weight: 700;
+  font-size: 28px;
+  border-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.664);
+  backdrop-filter: blur(10px);
+}
+/* .... */
+/* Mute */
+.mute {
+  margin: 0;
+  position: absolute;
+  top: 2vh;
+  left: 1vw;
+  border-style: none;
+  font-size: 30px;
+  color: white;
+  background: none;
+  z-index: -99;
 }
 
 /* .... */
