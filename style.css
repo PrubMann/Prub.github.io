@@ -1,14 +1,17 @@
 body {
   font-family: Open Sans, sans-serif;
   color: white;
+  overflow: hidden;
 }
 #bgvid {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
+  min-width: 100%;
+  min-height: 100%;
   background-size: cover;
   background: no-repeat center;
-  z-index: -1;
+  z-index: -100;
   /*Pos*/
   height: 100%;
   width: 177.77777778vh; /* 100 * 16 / 9 */
@@ -39,6 +42,7 @@ span {
 }
 /* Container + Items */
 .container {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,6 +51,7 @@ span {
 }
 
 .item {
+  z-index: 2;
   color: white;
   background: rgba(0, 0, 0, 0.432);
   width: 700px;
@@ -88,6 +93,7 @@ span {
   height: 200px;
   border-radius: 25px 25px 0px 0px;
   object-fit: cover;
+  z-index: 0;
 }
 
 .discordpfp {
@@ -102,6 +108,7 @@ span {
   font-weight: 700;
 }
 .addondisc {
+  color: white;
   text-decoration: none;
   margin-left: 310px;
   align-self: center;
