@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bio</title>
+    <title>[PЯ]</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="assets/PR.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,11 +17,9 @@
             class="fa-sharp fa-solid fa-volume-high"></i></button>
 
 
-    <video controls disablePictureInPicture autoplay muted loop id="bgvid">
-        <source
-            src="https://cdn.discordapp.com/attachments/677889760563429427/1250819197626486978/1718288699180.mp4?ex=666c53a7&is=666b0227&hm=771f38d6b591de9ba9a4d435eaeac2d3331c635d3cc40ed22ac951684e8f7347&"
-            type="video/mp4">
-    </video>
+    <video loop muted src="assets/background.mp4" id="bgvid"></video>
+
+    <!-- https://www.youtube.com/embed/yTJS55JNVS4 -->
     <div class="container">
         <div class="item">
             <div class="banner"><img class="banner" src="assets/banner.gif"></div>
@@ -43,7 +42,7 @@
         </div>
         <div class="item3">
             <div><img class="discordpfp"
-                    src="https://cdn.discordapp.com/avatars/142600842141237248/a_7f476879bd392d98a7fd29ef359ba72f?size=1024">
+                    src="https://cdn.discordapp.com/avatars/142600842141237248/a_6c12bec0a58f3ab952732cfb9d079a1d?size=1024">
             </div>
             <div class="discorduser">@prub</div>
             <a class="addondisc" target="_blank" href="https://discord.com/users/142600842141237248">
@@ -54,7 +53,10 @@
 
     </div>
 </body>
-<script src="scripts.js"></script>
 <script src="https://kit.fontawesome.com/75e047cbb4.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
+
+<script>new YouTubeToHtml5();</script>
+<script src="scripts.js"></script>
 
 </html>
