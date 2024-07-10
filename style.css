@@ -1,3 +1,6 @@
+html > div {
+  display: none !important;
+}
 body {
   font-family: Open Sans, sans-serif;
   color: white;
