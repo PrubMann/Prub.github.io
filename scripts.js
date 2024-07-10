@@ -37,7 +37,7 @@ function showVideo() {
   button.style.display = "none";
   delay(100).then(() => toggleMute());
   delay(50).then(() => element.play());
-  element.volume = 0.7;
+  element.volume = 0.5;
 }
 // ..
 
