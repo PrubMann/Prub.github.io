@@ -1,3 +1,6 @@
+img {
+  -webkit-user-drag: none;
+}
 html > div {
   display: none !important;
 }
