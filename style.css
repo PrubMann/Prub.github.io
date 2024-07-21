@@ -62,7 +62,7 @@ span {
 .item {
   z-index: 2;
   color: white;
-  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(50px);
   width: 700px;
   padding: 15px;
@@ -75,7 +75,7 @@ span {
   gap: 20px;
 
   color: white;
-  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(50px);
 
   width: 700px;
@@ -91,7 +91,7 @@ span {
   align-items: center;
 
   color: white;
-  background: rgba(0, 0, 0, 0.432);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(50px);
   width: 700px;
   padding: 15px;
