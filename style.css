@@ -63,6 +63,7 @@ span {
   z-index: 2;
   color: white;
   background: rgba(0, 0, 0, 0.432);
+  backdrop-filter: blur(50px);
   width: 700px;
   padding: 15px;
   border-radius: 15px;
@@ -75,6 +76,8 @@ span {
 
   color: white;
   background: rgba(0, 0, 0, 0.432);
+  backdrop-filter: blur(50px);
+
   width: 700px;
   padding: 15px;
   border-radius: 15px;
@@ -89,6 +92,7 @@ span {
 
   color: white;
   background: rgba(0, 0, 0, 0.432);
+  backdrop-filter: blur(50px);
   width: 700px;
   padding: 15px;
   border-radius: 15px;
