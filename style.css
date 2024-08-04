@@ -239,6 +239,7 @@ span {
 /* .... */
 /* Mute */
 .mute {
+  z-index: 99;
   margin: 0;
   position: absolute;
   top: 2vh;
@@ -247,7 +248,6 @@ span {
   font-size: 30px;
   color: white;
   background: none;
-  z-index: -99;
 }
 
 /* .... */
