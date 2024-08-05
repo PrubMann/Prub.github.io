@@ -52,4 +52,3 @@ function mutevid() {
     icon.className = "fa-solid fa-volume-xmark";
   }
 }
-
