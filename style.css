@@ -45,11 +45,11 @@ span {
 }
 
 .username {
+  color: antiquewhite;
   text-align: center;
   padding: 10px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 28px;
-  margin-top: 50px;
 }
 /* Container + Items */
 .container {
@@ -62,13 +62,20 @@ span {
 }
 
 .item {
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+
+  z-index: 1000;
+
   color: white;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 128, 128, 0.1);
   backdrop-filter: blur(50px);
   width: 700px;
   padding: 15px;
   border-radius: 15px;
+  border: 2px solid #000000;
 }
 
 .item2 {
@@ -77,7 +84,7 @@ span {
   gap: 20px;
 
   color: white;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 128, 128, 0.1);
   backdrop-filter: blur(50px);
 
   width: 700px;
@@ -85,6 +92,7 @@ span {
   border-radius: 15px;
 
   margin: auto;
+  border: 2px solid #000000;
 }
 
 .item3 {
@@ -93,11 +101,12 @@ span {
   align-items: center;
 
   color: white;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 128, 128, 0.1);
   backdrop-filter: blur(50px);
   width: 700px;
   padding: 15px;
   border-radius: 15px;
+  border: 2px solid #000000;
 }
 
 /* .... */
@@ -117,46 +126,117 @@ span {
   border-radius: 12px;
 }
 .discorduser {
-  display: flex;
-  font-size: 20px;
-  margin-left: 15px;
+  text-align: left;
+  font-size: 25px;
   font-weight: 700;
+  margin-bottom: 13px;
 }
+.desc {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.description {
+  width: max-content;
+  font-size: 16px;
+}
+
 .addondisc {
   display: flex;
   padding: 0px;
-  gap: 10px;
+  gap: 5px;
   color: white;
   text-decoration: none;
-  margin-left: 310px;
   align-self: center;
   font-weight: 700;
-  padding: 15px 30px 10px 30px;
+  padding: 15px 25px 10px 25px;
   background-color: rgba(255, 255, 255, 0.062);
   border-radius: 15px;
   white-space: nowrap;
+  transition: 1s;
+}
+.addondisc:hover {
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.253);
 }
 .addondisc:visited {
   color: white;
 }
 
 .pfp {
-  height: 200px;
+  height: 150px;
   border-radius: 50%;
-  border: 8px solid rgba(0, 0, 0, 0.363);
-  justify-content: center;
+  border: 2px solid rgb(0, 0, 0);
+  margin: 0;
 
-  position: relative;
-  transform: translate(111%, 25%);
+  transform: translateX(0);
 }
 
 /* tooltip */
 
-.LINK:hover .tooltip1 {
-  display: block;
-  transform: translate(10px, 30px);
-  transition: 0.5s;
+.mal::before,
+.mal::after {
+  --scale: 0;
+
+  position: absolute;
+  top: 6rem;
+  transform: translateX(0%) translateY(-100%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: top center;
 }
+.mal::before {
+  content: attr(data-tooltip);
+  color: white;
+  padding: 0.5rem;
+  width: max-content;
+  text-align: center;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid white;
+  background: rgb(0, 0, 0);
+}
+.mal {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(assets/mal.png);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 2px;
+  background-color: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(40px);
+  -webkit-box-shadow: 0px 0px 68px 0px rgba(199, 113, 113, 0.9);
+  -moz-box-shadow: 0px 0px 68px 0px rgba(199, 113, 113, 0.9);
+  box-shadow: 0px 0px 68px 0px rgba(199, 113, 113, 0.9);
+}
+.mal:hover::before {
+  position: absolute;
+  --scale: 1;
+}
+
+#spot::before,
+#spot::after {
+  top: 6rem;
+  transform: translateX(-18%) translateY(-100%) scale(var(--scale));
+}
+#steam::before,
+#steam::after {
+  top: 6rem;
+  transform: translateX(-10%) translateY(-100%) scale(var(--scale));
+}
+#spot {
+  background-image: url(assets/spotify.png);
+}
+#steam {
+  background-image: url(assets/steam.png);
+}
+
+/* .LINK:hover .tooltip1 {
+  display: block;
+  transition: 0.5s;
+} */
 
 .logo {
   width: 70px;
@@ -164,24 +244,29 @@ span {
   border-radius: 50%;
   transition: 0.5s;
 }
-.logo:hover {
+/* .logo:hover {
   margin: -5px 15px -5px 15px;
   border: 3px solid;
   color: white;
-}
-.tooltip1 {
-  display: none;
+} */
+/* .tooltip1 {
   font-size: 18px;
   background: #000000;
   color: white;
-  font-weight: 500;
   position: absolute;
+  font-weight: 500;
   z-index: 1000;
   padding: 5px;
+  transform: translate(-500px, -500px);
   border-radius: 7px;
-}
+} */
 
 /* .... */
+
+.socials {
+  display: flex;
+  gap: 5px;
+}
 
 /* css icon */
 .gg-arrow-right {
@@ -233,7 +318,7 @@ span {
   padding: 0;
   width: 100000px;
   height: 10000px;
-  background-color: rgba(0, 0, 0, 0.486);
+  background-color: rgba(0, 0, 0, 0.267);
   backdrop-filter: blur(40px);
 }
 /* .... */
@@ -250,4 +335,48 @@ span {
   background: none;
 }
 
-/* .... */
+/* User Description */
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+
+body {
+  padding: 40px;
+  background-color: #121212;
+}
+
+.text {
+  border-right: solid 3px rgb(255, 255, 255);
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Source Code Pro", monospace;
+  font-size: 26px;
+  color: rgb(255, 255, 255);
+  margin: 0 auto;
+}
+
+/* Animation */
+.text {
+  animation: animated-text 1.5s steps(27, end) 1s 1 normal both,
+    animated-cursor 600ms steps(27, end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 216px;
+  }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgb(255, 255, 255);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
