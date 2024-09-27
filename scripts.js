@@ -52,3 +52,8 @@ function mutevid() {
     icon.className = "fa-solid fa-volume-xmark";
   }
 }
+
+// Page Load
+window.addEventListener("load", function () {
+  document.getElementById("loading").style.display = "none";
+});
