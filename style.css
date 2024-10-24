@@ -17,18 +17,15 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  min-width: 100%;
-  min-height: 100%;
-  background-size: cover;
-  background: no-repeat center;
+  transform: translate(0px, -120px);
+  width: 100%;
   z-index: -100;
-  transform: translateY(-83px);
   /*Pos*/
-  height: 100%;
-  width: 177.77777778vh; /* 100 * 16 / 9 */
-  min-width: 100%;
-  min-height: 56.25vw; /* 100 * 9 / 16 */
 }
+/* height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
+/* min-width: 100%;
+  /* min-height: 56.25vw; 100 * 9 / 16 */
 
 body div span {
   display: block;
@@ -146,6 +143,7 @@ span {
   display: flex;
   padding: 0px;
   gap: 5px;
+  border: #000000 solid 2px;
   color: white;
   text-decoration: none;
   align-self: center;
@@ -395,4 +393,97 @@ body {
   height: 10000px;
   background-color: rgba(0, 0, 0, 0.267);
   backdrop-filter: blur(40px);
+}
+
+/* Music Player */
+
+.player {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  background-color: #3c2e2e00;
+  padding: 20px;
+  border-radius: 15px;
+  width: 800px;
+  text-align: center;
+  color: #e1b796;
+}
+
+.track-info p {
+  order: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 400;
+  width: 700px;
+  align-self: flex-start;
+}
+.prog-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.controls {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+
+  flex-grow: 1;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.skip-btn svg {
+  fill: black;
+}
+
+.skip-btn:hover svg {
+  fill: #ff7d8d;
+}
+
+.play-btn:hover {
+  fill: #ff7d8d;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-grow: 3;
+}
+
+#progress {
+  flex-grow: 1;
+  width: 400px;
+  cursor: pointer;
+}
+
+#current-time,
+#duration {
+  font-size: 12px;
+  color: #ffb48f;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #b3695d;
+  border-radius: 5px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  width: 20px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  height: 20px;
+  background: #251917;
 }
