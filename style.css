@@ -14,13 +14,16 @@ body {
   min-height: 90vh;
 }
 #bgvid {
+  transition: 1s;
   position: absolute;
   left: 0;
-  top: 0;
-  transform: translate(0px, -120px);
+  bottom: 0;
+  /* transform: translate(0px, -120px); */
   width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom;
   z-index: -100;
-  /*Pos*/
 }
 /* height: 100%;
   width: 177.77777778vh; /* 100 * 16 / 9 */
@@ -54,8 +57,8 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  width: 730px;
+  gap: 5px;
+  width: 78.66379310344827vh;
 }
 
 .item {
@@ -63,13 +66,13 @@ span {
   align-items: center;
   flex-direction: column;
   gap: 5px;
-
+  transition: 1s;
   z-index: 1000;
 
   color: white;
   background: rgba(255, 128, 128, 0.1);
   backdrop-filter: blur(50px);
-  width: 700px;
+  width: 72.19827586206897vh;
   padding: 15px;
   border-radius: 15px;
   border: 2px solid #000000;
@@ -79,12 +82,13 @@ span {
   display: flex;
   justify-content: center;
   gap: 20px;
+  transition: 1s;
 
   color: white;
   background: rgba(255, 128, 128, 0.1);
   backdrop-filter: blur(50px);
 
-  width: 700px;
+  width: 72.19827586206897vh;
   padding: 15px;
   border-radius: 15px;
 
@@ -96,11 +100,12 @@ span {
   display: flex;
   justify-content: left;
   align-items: center;
+  transition: 1s;
 
   color: white;
   background: rgba(255, 128, 128, 0.1);
   backdrop-filter: blur(50px);
-  width: 700px;
+  width: 72.19827586206897vh;
   padding: 15px;
   border-radius: 15px;
   border: 2px solid #000000;
@@ -121,6 +126,7 @@ span {
   height: 100px;
   width: 100px;
   border-radius: 12px;
+  border: #ffffff27 solid 2px;
 }
 .discorduser {
   text-align: left;
@@ -136,19 +142,20 @@ span {
 }
 .description {
   width: max-content;
-  font-size: 16px;
+  font-size: 1.7241379310344827vh;
 }
 
 .addondisc {
   display: flex;
+  font-size: 1.7241379310344827vh;
   padding: 0px;
   gap: 5px;
   border: #000000 solid 2px;
   color: white;
   text-decoration: none;
-  align-self: center;
   font-weight: 700;
-  padding: 15px 25px 10px 25px;
+  padding: 1.6163793103448276vh 2.6939655172413794vh 1.0775862068965518vh
+    2.6939655172413794vh;
   background-color: rgba(255, 255, 255, 0.062);
   border-radius: 15px;
   white-space: nowrap;
@@ -221,13 +228,21 @@ span {
 #steam::before,
 #steam::after {
   top: 6rem;
-  transform: translateX(-10%) translateY(-100%) scale(var(--scale));
+  transform: translateX(-15%) translateY(-100%) scale(var(--scale));
+}
+#last::before,
+#last::after {
+  top: 6rem;
+  transform: translateX(-15%) translateY(-100%) scale(var(--scale));
 }
 #spot {
   background-image: url(assets/spotify.png);
 }
 #steam {
   background-image: url(assets/steam.png);
+}
+#last {
+  background-image: url(assets/lastfm.png);
 }
 
 /* .LINK:hover .tooltip1 {
@@ -417,7 +432,7 @@ body {
   padding: 0;
   font-size: 20px;
   font-weight: 400;
-  width: 700px;
+  width: 75.43103448275862vh;
   align-self: flex-start;
 }
 .prog-cont {
@@ -462,7 +477,7 @@ body {
 
 #progress {
   flex-grow: 1;
-  width: 400px;
+  width: 21.2879191059074vw;
   cursor: pointer;
 }
 

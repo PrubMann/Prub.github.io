@@ -510,7 +510,7 @@ var VanillaTilt = (function () {
         max: 8,
         startX: 0,
         startY: 0,
-        perspective: 3000,
+        perspective: 2500,
         easing: "cubic-bezier(.03,.98,.52,.99)",
         scale: 1,
         speed: 300,
