@@ -30,6 +30,7 @@ function showVideo() {
   audio.play();
   playIcon.style.display = "none";
   pauseIcon.style.display = "inline";
+  updateMedia1(currentIndex);
 }
 // ..
 
@@ -59,6 +60,65 @@ const progress = document.getElementById("progress");
 const currentTimeEl = document.getElementById("current-time");
 const durationEl = document.getElementById("duration");
 
+const mediaList = [
+  {
+    title: "Shotgun Willy - Bombs Away",
+    song: "assets/bombs away.mp3",
+    video: "assets/background.mp4",
+  },
+  {
+    title: "Creepy Nuts - Otonoke (Dandadan Opening)",
+    song: "assets/dandadan.mp3",
+    video: "assets/dandadanVid.mp4",
+  },
+];
+let currentIndex = 0;
+
+const bgvideo = document.getElementById("bgvid");
+const vidmusic = document.getElementById("audio");
+const songtitle = document.getElementById("songtitle");
+
+// Update Media (Skip and Previous buttons)
+function updateMedia(index) {
+  if (index >= 0 && index < mediaList.length) {
+    [bgvideo, songtitle, progress, currentTimeEl, durationEl, playIcon, pauseIcon].forEach((el) => (el.style.opacity = 0));
+    setTimeout(() => {
+      playIcon.style.display = "none";
+      pauseIcon.style.display = "inline";
+      [bgvideo, songtitle, progress, currentTimeEl, durationEl, playIcon, pauseIcon, skipButton, prevButton].forEach((el) => (el.style.opacity = 1));
+      bgvideo.src = mediaList[index].video;
+      bgvideo.play();
+      vidmusic.src = mediaList[index].song;
+      vidmusic.play();
+      songtitle.textContent = mediaList[index].title;
+    }, 500);
+  }
+}
+function updateMedia1(index) {
+  if (index >= 0 && index < mediaList.length) {
+    bgvideo.src = mediaList[index].video;
+    bgvideo.play();
+    vidmusic.src = mediaList[index].song;
+    vidmusic.play();
+    songtitle.textContent = mediaList[index].title;
+  }
+}
+skipButton = document.getElementById("next");
+prevButton = document.getElementById("prev");
+
+// Skip Button
+document.getElementById("next").addEventListener("click", () => {
+  prevButton.style.opacity = 0;
+  currentIndex = (currentIndex + 1) % mediaList.length;
+  updateMedia(currentIndex);
+});
+// Prev Button
+document.getElementById("prev").addEventListener("click", () => {
+  skipButton.style.opacity = 0;
+  currentIndex = (currentIndex - 1 + mediaList.length) % mediaList.length;
+  updateMedia(currentIndex);
+});
+
 // Play/Pause toggle functionality
 playPauseBtn.addEventListener("click", () => {
   if (audio.paused) {
@@ -77,7 +137,7 @@ audio.addEventListener("timeupdate", () => {
   const currentTime = audio.currentTime;
   const duration = audio.duration;
   const progressPercent = (currentTime / duration) * 100;
-  progress.value = progressPercent;
+  progress.value = progressPercent + -0.5;
 
   // Update current time
   currentTimeEl.textContent = formatTime(currentTime);

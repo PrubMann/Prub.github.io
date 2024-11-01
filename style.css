@@ -71,7 +71,7 @@ span {
 
   color: white;
   background: rgba(255, 128, 128, 0.1);
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(10px);
   width: 72.19827586206897vh;
   padding: 15px;
   border-radius: 15px;
@@ -86,7 +86,7 @@ span {
 
   color: white;
   background: rgba(255, 128, 128, 0.1);
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(10px);
 
   width: 72.19827586206897vh;
   padding: 15px;
@@ -104,7 +104,7 @@ span {
 
   color: white;
   background: rgba(255, 128, 128, 0.1);
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(10px);
   width: 72.19827586206897vh;
   padding: 15px;
   border-radius: 15px;
@@ -154,8 +154,7 @@ span {
   color: white;
   text-decoration: none;
   font-weight: 700;
-  padding: 1.6163793103448276vh 2.6939655172413794vh 1.0775862068965518vh
-    2.6939655172413794vh;
+  padding: 1.6163793103448276vh 2.6939655172413794vh 1.0775862068965518vh 2.6939655172413794vh;
   background-color: rgba(255, 255, 255, 0.062);
   border-radius: 15px;
   white-space: nowrap;
@@ -352,7 +351,7 @@ span {
 
 body {
   padding: 40px;
-  background-color: #121212;
+  background-color: #000000;
 }
 
 .text {
@@ -367,8 +366,7 @@ body {
 
 /* Animation */
 .text {
-  animation: animated-text 1.5s steps(27, end) 1s 1 normal both,
-    animated-cursor 600ms steps(27, end) infinite;
+  animation: animated-text 1.5s steps(27, end) 1s 1 normal both, animated-cursor 600ms steps(27, end) infinite;
 }
 
 /* text animation */
@@ -501,4 +499,21 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 20px;
   background: #251917;
+}
+
+#songtitle,
+#bgvid,
+#progress,
+#current-time,
+#duration,
+#next,
+#prev,
+#play-icon,
+#pause-icon {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
 }
