@@ -63,8 +63,8 @@ const durationEl = document.getElementById("duration");
 const mediaList = [
   {
     title: "Tyler, The Creator - St. Chroma",
-    song: "assets/Chroma.mp4",
-    video: "assets/Chroma.mp3",
+    song: "assets/Chroma.mp3",
+    video: "assets/Chroma.mp4",
   },
 
   {
