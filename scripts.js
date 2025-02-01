@@ -62,6 +62,12 @@ const durationEl = document.getElementById("duration");
 
 const mediaList = [
   {
+    title: "Tyler, The Creator - St. Chroma",
+    song: "assets/Chroma.mp4",
+    video: "assets/Chroma.mp3",
+  },
+
+  {
     title: "Shotgun Willy - Bombs Away",
     song: "assets/bombs away.mp3",
     video: "assets/background.mp4",
